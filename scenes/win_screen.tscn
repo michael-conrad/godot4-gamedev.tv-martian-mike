@@ -1,7 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://q6510ldg4war"]
+[gd_scene load_steps=5 format=3 uid="uid://q6510ldg4war"]
 
 [ext_resource type="Script" path="res://scripts/win_screen.gd" id="1_lf0di"]
 [ext_resource type="FontFile" uid="uid://dt2gk37ntm448" path="res://assets/fonts/Kenney Pixel Square.ttf" id="1_xoi2r"]
+
+[sub_resource type="Theme" id="Theme_ylepo"]
+default_font = ExtResource("1_xoi2r")
 
 [sub_resource type="LabelSettings" id="LabelSettings_e8lfe"]
 font = ExtResource("1_xoi2r")
@@ -14,6 +17,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = SubResource("Theme_ylepo")
 script = ExtResource("1_lf0di")
 
 [node name="ColorRect" type="ColorRect" parent="."]
