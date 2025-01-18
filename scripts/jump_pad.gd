@@ -10,6 +10,7 @@ func _ready() -> void:
 
 func _on_body_entered(body: Node2D) -> void:
 	if body is Player:
+		AudioPlayer.play_sfx("jump")
 		body.jump(power)
 		animation.play("jump")
 

@@ -81,11 +81,12 @@ func _process(_delta: float) -> void:
 
 
 func _on_death_zone_body_entered(body: Node2D) -> void:
-	if body is Player:
+	if body is Player:		
 		reset_player()
 
 
 func _on_trap_touched_player() -> void:
+	AudioPlayer.play_sfx("hurt")
 	reset_player()
 
 

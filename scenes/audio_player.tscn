@@ -1,10 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://c3gym10357rrj"]
+[gd_scene load_steps=3 format=3 uid="uid://c3gym10357rrj"]
 
+[ext_resource type="Script" path="res://scripts/audio_player.gd" id="1_i57ul"]
 [ext_resource type="AudioStream" uid="uid://0abxf0tc7u35" path="res://assets/audio/music.ogg" id="1_isu0q"]
 
 [node name="AudioPlayer" type="Node"]
+script = ExtResource("1_i57ul")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("1_isu0q")
 volume_db = -20.0
 autoplay = true
+
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]

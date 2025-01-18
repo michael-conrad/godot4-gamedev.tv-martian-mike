@@ -11,6 +11,7 @@ var active: bool = true
 func _physics_process(delta: float) -> void:
 	if is_on_floor():
 		if Input.is_action_just_pressed("jump") and active:
+			AudioPlayer.play_sfx("jump")
 			jump(jump_power)			
 	else:
 		velocity.y += gravity * delta
