@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://dbvlc3x01jeqv"]
+[gd_scene load_steps=5 format=3 uid="uid://dbvlc3x01jeqv"]
 
 [ext_resource type="Texture2D" uid="uid://b2rjj7seyoqp6" path="res://assets/textures/Terrain (16x16).png" id="1_srfug"]
+[ext_resource type="Script" path="res://scripts/test.cs" id="2_2b5y8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wrrfy"]
 resource_name = "Terrain"
@@ -388,3 +389,4 @@ sources/0 = SubResource("TileSetAtlasSource_wrrfy")
 
 [node name="TileMapLayer" type="TileMapLayer"]
 tile_set = SubResource("TileSet_2qtqt")
+script = ExtResource("2_2b5y8")
